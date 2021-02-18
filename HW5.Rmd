@@ -17,9 +17,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-<style type="text/css">
-    ol { list-style-type: lower-alpha; }
-</style>
 
 # 1. Joining Student Data Tables [7 points]
 
@@ -50,7 +47,7 @@ Filtering joins:
   
 Remember that you may have to specific the key to use and that it may be necessary to use more than one variable as the key.  
 
-a) Use `read_csv()` to read these data files into datasets (tibbles) called **id_list**, **study_abroad**, **admission**, **acad_records**, and **housing**.   
+**a)** Use `read_csv()` to read these data files into datasets (tibbles) called **id_list**, **study_abroad**, **admission**, **acad_records**, and **housing**.   
 
 **Answer:**
 
@@ -59,7 +56,7 @@ a) Use `read_csv()` to read these data files into datasets (tibbles) called **id
 ```
 
 
-b) Use an appropriate join to add major and college GPA to the **id_list** table without changing the order of the rows.
+**b)** Use an appropriate join to add major and college GPA to the **id_list** table without changing the order of the rows.
 
 **Answer:**
 
@@ -68,7 +65,7 @@ b) Use an appropriate join to add major and college GPA to the **id_list** table
 ```
 
 
-c) For each student in the id_list table, create a table that also contains the dorm they lived in. If they lived off campus, the dorm variable should contain an NA value. 
+**c)** For each student in the id_list table, create a table that also contains the dorm they lived in. If they lived off campus, the dorm variable should contain an NA value. 
 
 **Answer:**
 
@@ -76,24 +73,7 @@ c) For each student in the id_list table, create a table that also contains the 
 
 ```
 
-d) Repeat the previous but instead create a table that only contains students who lived in dorms. Your join should exclude off-campus students.
-
-**Answer:**
-
-```{r}
-
-```
-
-
-e) Carry out a single join that displays just the information in the **id_list** for two students: one whose application was accidentally deleted (don't worry, it's on the backup!) and the student whose name was misspelled by admissions. 
-
-**Answer:**
-
-```{r}
-
-```
-
-f)  Carry out a single join that prints a list of students who did NOT participate in study abroad.   
+**d)** Repeat the previous but instead create a table that only contains students who lived in dorms. Your join should exclude off-campus students.
 
 **Answer:**
 
@@ -102,7 +82,15 @@ f)  Carry out a single join that prints a list of students who did NOT participa
 ```
 
 
-g) Use appropriate joins and data transformation commands to create a table that includes all columns in the study abroad table and additionally their college GPAs, a total of just 4 columns.  
+**e)** Carry out a single join that displays just the information in the **id_list** for two students: one whose application was accidentally deleted (don't worry, it's on the backup!) and the student whose name was misspelled by admissions. 
+
+**Answer:**
+
+```{r}
+
+```
+
+**f)**  Carry out a single join that prints a list of students who did NOT participate in study abroad.   
 
 **Answer:**
 
@@ -111,7 +99,16 @@ g) Use appropriate joins and data transformation commands to create a table that
 ```
 
 
-h) Use appropriate joins and transformation commands to create a table that contains a list of all current students containing the following information in this order: student id, first and last name, major, college GPA, study abroad site (or NA for non-participants), and a variable called `housing` that is "ON" if they lived in a campus dorm and "OFF" otherwise. Do NOT include a column with the name of the dorm in which they lived. Sort our table by student ID number in increasing numerical order.
+**g)** Use appropriate joins and data transformation commands to create a table that includes all columns in the study abroad table and additionally their college GPAs, a total of just 4 columns.  
+
+**Answer:**
+
+```{r}
+
+```
+
+
+**h)** Use appropriate joins and transformation commands to create a table that contains a list of all current students containing the following information in this order: student id, first and last name, major, college GPA, study abroad site (or NA for non-participants), and a variable called `housing` that is "ON" if they lived in a campus dorm and "OFF" otherwise. Do NOT include a column with the name of the dorm in which they lived. Sort our table by student ID number in increasing numerical order.
 
 **Answer:**
 
@@ -124,7 +121,7 @@ h) Use appropriate joins and transformation commands to create a table that cont
 
 This question requires use of the datasets discussed in R4DS and provided in the **nycflights13** package. Be sure to load the package before trying the problems.  
 
-a) Is there a relationship between the age of a plane and its average arrival delays?  Use join, and data transformation commands to prepare the data and then produce a plot using **ggplot2**. Comment on your plot.  (Hint: you'll have to create a data set with average arrival delays for each plane, and then merge in age information.)   
+**a)** Is there a relationship between the age of a plane and its average arrival delays?  Use join, and data transformation commands to prepare the data and then produce a plot using **ggplot2**. Comment on your plot.  (Hint: you'll have to create a data set with average arrival delays for each plane, and then merge in age information.)   
 
 **Answer:**
 
@@ -132,7 +129,7 @@ a) Is there a relationship between the age of a plane and its average arrival de
 
 ```
 
-b) Two airlines seem to run most of the planes which can not be found in the `planes` data set.  Identify those two airlines by name, not just by code.  Here is one possible set of steps:
+**b)** Two airlines seem to run most of the planes which can not be found in the `planes` data set.  Identify those two airlines by name, not just by code.  Here is one possible set of steps:
 
 * filter the **flights** data to contain only airplanes not found in the `planes` data set  
 * create a new variable containing just the last 2 characters in `tailnum`  
@@ -150,7 +147,7 @@ b) Two airlines seem to run most of the planes which can not be found in the `pl
 The character vector called `fruit` in **stringr** contains a list of 80 (!) fruit from around the world.   Use regular expressions in `str_subset()` to find the fruit that satisfy the following conditions. You might wish to use `str_view()` while experimenting but then use `str_subset()` to show your results. This will prevent printing the entire list of 80 each time! If you get stuck, you can certainly google and use stack overflow for help. This exercise is intended to push you to learn a little regexp so you can get a feel for what it can do.  
 
 
-a) Find all fruit that have names that begin with the letter `d`.   
+**a)** Find all fruit that have names that begin with the letter `d`.   
 
 **Answer:**
 
@@ -158,7 +155,7 @@ a) Find all fruit that have names that begin with the letter `d`.
 
 ```
 
-b) Find all fruit that have names that contain `r`, `n` or `q`. 
+**b)** Find all fruit that have names that contain `r`, `n` or `q`. 
 
 **Answer:**
 
@@ -166,7 +163,7 @@ b) Find all fruit that have names that contain `r`, `n` or `q`.
 
 ```
 
-c) Find all fruit that have names that contain `ia` or `io`.  
+**c)** Find all fruit that have names that contain `ia` or `io`.  
 
 **Answer:**
 
@@ -174,7 +171,7 @@ c) Find all fruit that have names that contain `ia` or `io`.
 
 ```
 
-d) Find all fruit that have names that end with `n` but not `in`.  
+**d)** Find all fruit that have names that end with `n` but not `in`.  
 
 **Answer:**
 
@@ -182,7 +179,7 @@ d) Find all fruit that have names that end with `n` but not `in`.
 
 ```
 
-e) Find all fruit that have names that contain `ur` first and `an` later in the name.  
+**e)** Find all fruit that have names that contain `ur` first and `an` later in the name.  
 
 **Answer:**
 
@@ -190,16 +187,7 @@ e) Find all fruit that have names that contain `ur` first and `an` later in the 
 
 ```
 
-f) Find all fruit that have names that are exactly 6 letters long.  
-
-**Answer:**
-
-```{r}
-
-```
-
-
-g) Find all fruit that have names that start and end with the same letter? (Hint: Test your regexp specification on "abracadabra" and "leviosa" to make sure the regexp magic is really working but only when it's supposed to. Or you could test it on the character vector corpus of  `words` included in **stringr**).  
+**f)** Find all fruit that have names that are exactly 6 letters long.  
 
 **Answer:**
 
@@ -208,7 +196,16 @@ g) Find all fruit that have names that start and end with the same letter? (Hint
 ```
 
 
-h) What is my favorite fruit? Questions a-f are intended to give you a strong hint!
+**g)** Find all fruit that have names that start and end with the same letter? (Hint: Test your regexp specification on "abracadabra" and "leviosa" to make sure the regexp magic is really working but only when it's supposed to. Or you could test it on the character vector corpus of  `words` included in **stringr**).  
+
+**Answer:**
+
+```{r}
+
+```
+
+
+**h)** What is my favorite fruit? Questions a-f are intended to give you a strong hint!
 
 **Answer:**
 
