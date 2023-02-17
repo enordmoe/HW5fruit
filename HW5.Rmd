@@ -2,7 +2,7 @@
 title: "Math 295: Homework 5"
 subtitle: "Relational Data and Strings"
 author: "Be Sure to Put Your Name Here"  
-date: "Due Friday, February 27, 2023 by 11:59 pm"
+date: "Due Friday, February 24, 2023 by 11:59 pm"
 output: 
   github_document: 
     toc: true
